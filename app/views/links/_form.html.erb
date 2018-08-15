@@ -1,11 +1,11 @@
 <%= form_for @link do |f| %>
   <div class="field">
     <%= f.label :name, "Short name" %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder: 'ticketbud' %>
   </div>
   <div class="field">
-    <%= f.label :url, "Url" %>
-    <%= f.text_field :url %>
+    <%= f.label :url, "Website url" %>
+    <%= f.text_field :url, placeholder: 'https://ticketbud.com', class: 'long' %>
   </div>
   <div class="actions">
     <%= f.submit "Save Link", data: { disable_with: "Saving..." } %>

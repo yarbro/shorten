@@ -1,0 +1,9 @@
+<% if flash.any? %>
+  <% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) %>
+      <div id="messages" class="<%= "msg-#{name}" %>">
+        <%= content_tag :div, msg, class: "content" %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

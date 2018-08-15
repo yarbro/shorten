@@ -1,2 +1,15 @@
-<h1>Link - <%= @link.name %></h1>
-<p><%= @link.url %></p>
+<p class="back"><%= link_to "« Back to list", links_path %></p>
+<div class="box">
+  <div class="data">
+    <h4>Short name</h4>
+    <p><%= @link.name %></p>
+  </div>
+  <div class="data">
+    <h4>Website url</h4>
+    <p><%= @link.url %></p>
+  </div>
+  <div class="actions">
+    <%= link_to "Edit", edit_link_path(@link) %>
+    <%= link_to "Delete", link_path(@link), method: :delete %>
+  </div>
+</div>

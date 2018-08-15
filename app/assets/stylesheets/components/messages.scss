@@ -1,0 +1,19 @@
+#messages {
+  padding: 10px;
+  background: #fff;
+
+  .content {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.msg-notice {
+  color: #1285bf;
+}
+
+.msg-error {
+  color: #e91e63;;
+}
+

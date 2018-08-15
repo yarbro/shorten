@@ -1,0 +1,39 @@
+.actions {
+  input {
+    background: #555;
+    color: #fff;
+  }
+}
+
+
+input[type="submit"], .btn, button {
+  -webkit-font-smoothing: antialiased;
+  box-shadow: none;
+  background-color: #397ada;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 2px solid #265292;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 10pt;
+  font-weight: 500;
+  line-height: 1;
+  padding: 1em 1.8em;
+  text-transform: uppercase;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: #326ec7;
+    color: #fff;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

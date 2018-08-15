@@ -1,0 +1,27 @@
+
+table {
+  width: 100%;
+  background: #fff;
+  border: 1px solid grey;
+  font-size: 12pt;
+  color: #333;
+  border-collapse: collapse;
+}
+
+table thead th {
+  color: #777;
+  background: rgba(0,0,0,.1);
+}
+
+table th, table td {
+  padding: .5em;
+  border: 1px solid lightgrey;
+}
+
+tbody tr:nth-of-type(odd) {
+  background: rgba(0,0,0,.05);
+}
+
+tbody tr:nth-of-type(odd) {
+  background: rgba(255,255,255,.05);
+}

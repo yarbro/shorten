@@ -14,19 +14,8 @@
 #
 
 class Link < ApplicationRecord
-  validates :name, presence: true
-  validates :url, presence: true
-  validate :validate_url
-
-  private
-
-  # Basic url validation
-  # -- we could be more strict but that may inhibit valid input
-  # -- better to be less strict and gracefully handle errors
-  def validate_url
-    uri = URI.parse(url) rescue false
-    unless uri.kind_of?(URI::HTTP) || uri.kind_of?(URI::HTTPS)
-      errors.add(:url, 'not a valid url')
-    end
-  end
+  validates :name, presence: true, format: {
+    with: /\A[a-z0-9_-]+\z/i, message: 'only allows url safe characters'
+  }
+  validates :url, presence: true, url: true
 end

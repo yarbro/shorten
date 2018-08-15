@@ -34,7 +34,7 @@ class LinksControllerTest < ActionDispatch::IntegrationTest
     assert_equal link, assigns(:link)
   end
 
-  test "should get update" do
+  test "should post update" do
     link = links(:valid)
     updates = { name: 'altavista', url: 'https://altavista.com' }
 
@@ -51,5 +51,11 @@ class LinksControllerTest < ActionDispatch::IntegrationTest
       delete link_path(link)
     end
     assert_redirected_to links_path
+  end
+
+  test "should redirect to url" do
+    link = links(:valid)
+    get "/#{link.name}"
+    assert_redirected_to link.url
   end
 end

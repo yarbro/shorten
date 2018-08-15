@@ -44,6 +44,16 @@ class LinksController < ApplicationController
     end
   end
 
+  def redirect
+    @link = Link.find_by_name(params[:name])
+
+    if @link
+      redirect_to @link.url
+    else
+      raise ActionController::RoutingError.new('Not Found')
+    end
+  end
+
   private
 
   def link_params

@@ -25,6 +25,16 @@ class LinkTest < ActiveSupport::TestCase
     assert_not_nil link.errors[:name]
   end
 
+  test 'does not allow names on blacklist' do
+    link = Link.new(name: 'link', url: 'https://twitter.com')
+    assert link.invalid?
+    assert_not_nil link.errors[:name]
+
+    link = Link.new(name: 'links', url: 'https://twitter.com')
+    assert link.invalid?
+    assert_not_nil link.errors[:name]
+  end
+
   test 'has a url safe name' do
     link = Link.new(name: '#$$name$$#', url: 'https://microsoft.com')
     assert link.invalid?

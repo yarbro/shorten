@@ -18,12 +18,19 @@ class LinkTest < ActiveSupport::TestCase
     assert_not_nil link.errors[:url]
   end
 
+  test 'has a unique name' do
+    link = Link.create(name: 'yahoo', url: 'https://yahoo.com')
+    link = Link.new(name: 'yahoo', url: 'https://yahoo.com')
+    assert link.invalid?
+    assert_not_nil link.errors[:name]
+  end
+
   test 'has a url safe name' do
-    link = Link.new(name: '#$$name$$#', url: 'https://google.com')
+    link = Link.new(name: '#$$name$$#', url: 'https://microsoft.com')
     assert link.invalid?
     assert_not_nil link.errors[:name]
 
-    link = Link.new(name: 'invalid // name', url: 'https://google.com')
+    link = Link.new(name: 'invalid // name', url: 'https://microsoft.com')
     assert link.invalid?
     assert_not_nil link.errors[:name]
   end

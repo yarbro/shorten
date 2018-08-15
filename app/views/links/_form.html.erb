@@ -1,0 +1,13 @@
+<%= form_for @link do |f| %>
+  <div class="field">
+    <%= f.label :name, "Short name" %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :url, "Url" %>
+    <%= f.text_field :url %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save Link", data: { disable_with: "Saving..." } %>
+  </div>
+<% end %>

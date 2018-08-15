@@ -1,0 +1,22 @@
+<h2>Create a link</h2>
+<%= render "form" %>
+
+<h2>Links</h2>
+<table>
+  <thead>
+    <tr>
+      <td>Short Name</td>
+      <td>Url</td>
+      <td>Settings</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @links.each do |l| %>
+      <tr>
+        <td><%= l.name %></td>
+        <td><%= l.url %></td>
+        <td><%= link_to "Edit", edit_link_path(l) %> <%= link_to "Delete", link_path(l), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -14,7 +14,7 @@
 #
 
 class Link < ApplicationRecord
-  validates :name, presence: true, format: {
+  validates :name, presence: true, uniqueness: true, format: {
     with: /\A[a-z0-9_-]+\z/i, message: 'only allows url safe characters'
   }
   validates :url, presence: true, url: true

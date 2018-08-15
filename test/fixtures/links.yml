@@ -3,3 +3,7 @@
 valid:
   name: google
   url: https://google.com
+
+destroy:
+  name: facebook
+  url: https://facebook.com

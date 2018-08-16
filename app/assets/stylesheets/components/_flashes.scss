@@ -1,16 +1,17 @@
 #flashes {
   padding: 10px;
-  background: #fff;
+  background: #f7f7f7;
+  box-shadow: 0px 3px 5px -1px #1875a5;
 
   .content {
-    max-width: 550px;
+    max-width: 600px;
     margin: 0 auto;
     text-align: center;
   }
 }
 
 .flash-notice {
-  color: #1285bf;
+  color: #397ada;
 }
 
 .flash-error {

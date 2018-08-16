@@ -1,37 +1,5 @@
-body {
-  font-family: 'Roboto', sans-serif;
-  background: rgb(49,189,203);
-  background: -moz-linear-gradient(90deg, rgba(49,189,203,1) 0%, rgba(16,130,190,1) 100%);
-  background: -webkit-linear-gradient(90deg, rgba(49,189,203,1) 0%, rgba(16,130,190,1) 100%);
-  background: linear-gradient(90deg, rgba(49,189,203,1) 0%, rgba(16,130,190,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#31bdcb",endColorstr="#1082be",GradientType=1);
-}
-
-h2 {
-  color: #fff;
-}
-
-a {
-  color: #397ada;
-
-  &:hover {
-    color: #326ec7;
-  }
-
-  &:visited {
-    color: #265292;
-  }
-}
-
-.main {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 25px 30px;
-}
-
-.box {
-  box-shadow: 0px 3px 5px -1px #1875a5;
-  padding: 30px;
-  background: #f7f7f7;
-  border-top: 5px solid #47cedc;
-}
+@import "layout";
+@import "forms";
+@import "buttons";
+@import "flashes";
+@import "tables";

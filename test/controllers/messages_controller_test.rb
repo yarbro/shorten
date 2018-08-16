@@ -10,7 +10,7 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
       }
     }
 
-    assert_redirected_to link_path(link)
+    assert_redirected_to links_path
     assert_equal 'SMS sent successfully!', flash[:notice]
   end
 end

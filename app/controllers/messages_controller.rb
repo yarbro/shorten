@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
 
     if @message.valid?
       TextMessenger.new(@message.number, redirect_link_url(@link.name))
-      redirect_to @link, notice: 'SMS sent successfully!'
+      redirect_to links_path, notice: 'SMS sent successfully!'
     else
       flash.now[:error] = 'SMS could not be sent please try again.'
       render 'links/show'

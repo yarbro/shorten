@@ -1,0 +1,9 @@
+<%= form_for @message do |f| %>
+  <div class="field">
+    <%= f.label :number, "Send text message to" %>
+    <%= f.telephone_field :number, placeholder: '(555) 555-0000' %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Send SMS", data: { disable_with: "Sending..." } %>
+  </div>
+<% end %>

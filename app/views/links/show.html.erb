@@ -3,13 +3,17 @@
   <div class="data">
     <h4>Short name</h4>
     <p><%= @link.name %></p>
+    <p><%= link_to redirect_link_url(@link.name), redirect_link_url(@link.name) %></p>
   </div>
   <div class="data">
     <h4>Website url</h4>
     <p><%= @link.url %></p>
   </div>
-  <div class="actions">
+  <div class="options">
     <%= link_to "Edit", edit_link_path(@link) %>
     <%= link_to "Delete", link_path(@link), method: :delete %>
+  </div>
+  <div class="callout">
+    <%= render "links/message" %>
   </div>
 </div>

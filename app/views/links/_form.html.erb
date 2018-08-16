@@ -5,7 +5,7 @@
   </div>
   <div class="field">
     <%= f.label :url, "Website url" %>
-    <%= f.text_field :url, placeholder: 'https://ticketbud.com', class: 'long' %>
+    <%= f.url_field :url, placeholder: 'https://ticketbud.com', class: 'long' %>
   </div>
   <div class="actions">
     <%= f.submit "Save Link", data: { disable_with: "Saving..." } %>

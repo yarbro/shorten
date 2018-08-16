@@ -5,20 +5,26 @@
 
 <h2>Links</h2>
 <div class="box">
-  <table>
-    <thead>
-      <tr>
-        <th>Short name</th>
-        <th>Website url</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @links.each do |l| %>
+  <% if @links.size == 0 %>
+    <div class="placeholder">
+      <p>No shortened links created.</p>
+    </div>
+  <% else %>
+    <table>
+      <thead>
         <tr>
-          <td><%= link_to l.name, link_path(l) %></td>
-          <td><%= l.url %></td>
+          <th>Short name</th>
+          <th>Website url</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% @links.each do |l| %>
+          <tr>
+            <td><%= link_to l.name, link_path(l) %></td>
+            <td><%= l.url %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
 </div>

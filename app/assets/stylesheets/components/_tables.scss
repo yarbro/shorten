@@ -1,5 +1,6 @@
 
 table {
+  word-break: break-all;
   width: 100%;
   background: #fff;
   border: 1px solid grey;
@@ -9,6 +10,7 @@ table {
 }
 
 table thead th {
+  min-width: 125px;
   color: #777;
   background: rgba(0,0,0,.1);
 }
